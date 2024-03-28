@@ -22,5 +22,16 @@
 
   .navBar__container {
     border: solid 1px black;
+    display: flex;
+
+    .navBar__heading {
+      font-size: 30px;
+      margin-left: 20px;
+      color: rgb(211, 211, 107);
+    }
+
+    .navBar__heading--mobile {
+      display: none;
+    }
   }
 }

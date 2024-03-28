@@ -29,37 +29,37 @@
       margin-left: 20px;
     }
   }
+}
 
-  @media screen and (min-width: 480px) {
-    body {
-      background-color: red;
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+
+  .beerCard__content {
+    border: 1px solid black;
+    text-align: center;
+
+    .beerCard__heading {
+      font-size: 10px;
     }
 
-    .beerCard__content {
-      border: 1px solid black;
-      text-align: center;
+    .beerCard__description {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 8px;
+      background-color: rgb(123, 154, 248);
+    }
 
-      .beerCard__heading {
-        font-size: 10px;
-      }
+    .beerCard__pairing {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 8px;
+    }
 
-      .beerCard__description {
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 8px;
-        background-color: rgb(123, 154, 248);
-      }
-
-      .beerCard__pairing {
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 8px;
-      }
-
-      .beerCard__image {
-        height: 100px;
-        margin-left: 20px;
-      }
+    .beerCard__image {
+      height: 50px;
+      margin-left: 20px;
     }
   }
 }
