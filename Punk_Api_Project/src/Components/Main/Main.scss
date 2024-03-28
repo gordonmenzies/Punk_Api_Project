@@ -1,4 +1,16 @@
-.mainBody__container {
-  display: flex;
-  flex-direction: row;
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+
+  .mainBody__container {
+    display: flex;
+    flex-direction: row;
+  }
 }

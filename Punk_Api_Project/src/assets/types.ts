@@ -22,20 +22,20 @@ export type Beer = {
   contributed_by: string;
 };
 
-type Ingredients = {
+export type Ingredients = {
   malt: Malt[];
   hops: Hop[];
   yeast: string;
 };
 
-type Hop = {
+export type Hop = {
   name: string;
   amount: Volume;
   add: string;
   attribute: string;
 };
 
-type Malt = {
+export type Malt = {
   name: string;
   amount: Volume;
 };

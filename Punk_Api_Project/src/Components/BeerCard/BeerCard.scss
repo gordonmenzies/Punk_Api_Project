@@ -1,14 +1,65 @@
-.beerContainer {
-  border: 1px solid black;
-  text-align: center;
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+  .beerCard__content {
+    border: 1px solid black;
+    text-align: center;
+    width: 60%;
 
-  p {
-    margin-left: 20px;
-    padding-right: 20px;
+    .beerCard__heading {
+      font-size: 10px;
+    }
+
+    .beerCard__description {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 8px;
+      background-color: rgb(123, 154, 248);
+    }
+
+    .beerCard__pairing {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 8px;
+    }
+
+    .beerCard__image {
+      height: 100px;
+      margin-left: 20px;
+    }
   }
 
-  img {
-    height: 100px;
-    margin-left: 20px;
+  @media screen and (min-width: 480px) {
+    body {
+      background-color: red;
+    }
+
+    .beerCard__content {
+      border: 1px solid black;
+      text-align: center;
+
+      .beerCard__heading {
+        font-size: 10px;
+      }
+
+      .beerCard__description {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 8px;
+        background-color: rgb(123, 154, 248);
+      }
+
+      .beerCard__pairing {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 8px;
+      }
+
+      .beerCard__image {
+        height: 100px;
+        margin-left: 20px;
+      }
+    }
   }
 }

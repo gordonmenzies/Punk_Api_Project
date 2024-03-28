@@ -1,3 +1,19 @@
-.filterList__container {
-  width: 200px;
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+
+  .filterList__container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+
+  .filterList__container {
+    width: 200px;
+  }
 }

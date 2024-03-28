@@ -1,3 +1,21 @@
-.filterItem__container {
-  width: 200px;
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+
+  .filterItem__container {
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+  .filterItem__container {
+    width: 200px;
+  }
 }

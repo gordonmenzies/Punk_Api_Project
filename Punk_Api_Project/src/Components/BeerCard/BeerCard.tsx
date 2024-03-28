@@ -14,15 +14,13 @@ const BeerCard = ({
   food_pairing,
 }: BeerCardProps) => {
   return (
-    <div className="beerContainer">
-      <p>{name}</p>
-      <img src={image_url} />
-      <p>description</p>
-      <p> --------- </p>
-      <p>{description}</p>
-      <p>pairing</p>
-      <p>---------</p>
-      <p>{food_pairing}</p>
+    <div className="beerCard__content">
+      <h1 className="beerCard__heading">{name}</h1>
+      <img className="beerCard__image" src={image_url} />
+      <h2 className="beerCard__description">description</h2>
+      <h2 className="beerCard__description">{description}</h2>
+      <h3 className="beerCard__pairing">pairing</h3>
+      <h3 className="beerCard__pairing">{food_pairing}</h3>
     </div>
   );
 };
