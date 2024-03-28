@@ -1,11 +1,8 @@
 import "./App.scss";
-import beers from "./assets/beers";
 import "./assets/types";
 import Main from "./Components/Main/Main";
 
 function App() {
-  console.log(beers);
-
   return <Main />;
 }
 

@@ -11,6 +11,7 @@ const BeerList = ({ beers }: BeerListProps) => {
     <div className="beerList">
       {beers.map((beer: Beer) => (
         <BeerCard
+          key={beer.id}
           name={beer.name}
           image_url={beer.image_url}
           description={beer.description}

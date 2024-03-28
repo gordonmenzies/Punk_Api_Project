@@ -2,6 +2,17 @@
   body {
     background-color: blue;
   }
+
+  .navBar__container {
+    border: solid 1px black;
+    display: flex;
+
+    .navBar__heading {
+      font-size: 10px;
+      margin-left: 20px;
+      color: rgb(211, 211, 107);
+    }
+  }
 }
 
 @media screen and (min-width: 480px) {

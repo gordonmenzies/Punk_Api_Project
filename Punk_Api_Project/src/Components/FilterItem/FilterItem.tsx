@@ -1,15 +1,18 @@
 import "./FilterItem.scss";
-import { Beer } from "../../assets/types";
 
 type FilterItemProps = {
   filterChoice: string;
-  beer: Beer;
+  sortOptions: string[];
 };
 
-const FilterItem = ({ beer, filterChoice }: FilterItemProps) => {
+const FilterItem = ({ sortOptions, filterChoice }: FilterItemProps) => {
   return (
     <div className="filterItem__container">
-      <select></select>
+      <select>
+        {sortOptions.map((sortOption, index) => (
+          <option key={index}>{sortOption}</option>
+        ))}
+      </select>
       <p>{filterChoice}</p>
     </div>
   );
