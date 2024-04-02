@@ -35,10 +35,10 @@ beers.forEach((beer: Beer) => {
   preppedFoodPairingList = identifyFoodPairings();
 });
 
-const FilterList = ({ readFilter, searchName }: FilterListProps) => {
+const FilterList = ({ readFilter }: FilterListProps) => {
   return (
     <div className="filterList__container">
-      <SearchItem searchName={searchName} filterChoice="name Search" />
+      <SearchItem searchName={readFilter} filterChoice="name Search" />
       <FilterItem
         readFilter={readFilter}
         filterChoice="Malt"

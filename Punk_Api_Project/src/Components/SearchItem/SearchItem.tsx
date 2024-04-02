@@ -7,7 +7,7 @@ type SearchItemProps = {
 };
 
 const SearchItem = ({ searchName, filterChoice }: SearchItemProps) => {
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const readFilter = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedValue = event.target.value;
     searchName(selectedValue, filterChoice);
   };
@@ -15,7 +15,7 @@ const SearchItem = ({ searchName, filterChoice }: SearchItemProps) => {
   return (
     <div className="filterItem__container">
       <p>{filterChoice}</p>
-      <input type="text" onChange={handleChange}></input>
+      <input type="text" onChange={readFilter}></input>
     </div>
   );
 };
