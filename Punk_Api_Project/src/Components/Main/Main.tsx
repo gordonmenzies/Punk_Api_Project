@@ -3,20 +3,13 @@ import beers from "../../assets/dataFormatted.ts";
 import FilterList from "../FilterList/FilterList";
 import BeerList from "../BeerList/BeerList";
 import NavBar from "../NavBar/NavBar";
-import { Beer, Malt } from "../../assets/types";
+import { Beer } from "../../assets/types";
 import { useState } from "react";
 
 type FilterResult = {
   selectedValue: string;
   filterChoice: string;
 };
-
-// interface FilterObject {
-//   Hops?: string[];
-//   Malt?: string[];
-//   Abv?: number;
-//   foodPairing: string[];
-// }
 
 const Main = () => {
   const [displayBeers, setDisplayBeers] = useState<Beer[]>(beers);
@@ -28,67 +21,51 @@ const Main = () => {
       { selectedValue: selectedValue, filterChoice: filterChoice },
     ]);
 
-    console.log(filterResult);
+    console.log(selectedValue, filterChoice);
     console.log("displayBeers", displayBeers);
-    filterArray();
+    console.log("call filter array", filterArray(selectedValue, filterChoice));
   };
 
-  const filterArray = () => {
+  const filterArray = (selectedValue: string, filterChoice: string) => {
     let maltSearch: Beer[] = [];
     let hopsSearch: Beer[] = [];
     let pairingSearch: Beer[] = [];
     let abvSearch: Beer[] = [];
 
-    filterResult.forEach((result) => {
-      displayBeers.forEach((beer) => {
-        if (result.filterChoice === "Malt") {
-          beer.ingredients.malt.forEach((malt) => {
-            if (malt.name === result.selectedValue) {
-              maltSearch.push(beer);
-            }
-          });
-        } else if (result.filterChoice === "Hops") {
-          beer.ingredients.hops.forEach((hops) => {
-            if (hops.name === result.selectedValue) {
-              hopsSearch.push(beer);
-            }
-          });
-        } else if (result.filterChoice === "Abv") {
-          if (beer.abv === Number(result.selectedValue)) {
-            abvSearch.push(beer);
-          }
-        } else if (result.filterChoice === "Food pairing") {
-          beer.food_pairing.forEach((pairing) => {
-            if (pairing === result.selectedValue) {
-              pairingSearch.push(beer);
-            }
-          });
-        }
-      });
-    });
-
-    console.log(maltSearch);
-    console.log(hopsSearch);
-    console.log(pairingSearch);
-    console.log(abvSearch);
-
+    if (filterChoice === "Malt") {
+      maltSearch = displayBeers.filter((beer) =>
+        beer.ingredients.malt.some((malt) => malt.name === selectedValue)
+      );
+    } else if (filterChoice === "Hops") {
+      hopsSearch = displayBeers.filter((beer) =>
+        beer.ingredients.hops.some((hops) => hops.name === selectedValue)
+      );
+    } else if (filterChoice === "Abv") {
+      abvSearch = displayBeers.filter(
+        (beer) => beer.abv === Number(selectedValue)
+      );
+    } else if (filterChoice === "Food pairing") {
+      pairingSearch = displayBeers.filter((beer) =>
+        beer.food_pairing.includes(selectedValue)
+      );
+    }
     const filteredBeerList = maltSearch.concat(
       hopsSearch,
       pairingSearch,
       abvSearch
     );
-    return filteredBeerList;
+
+    console.log("filtered Beers", filteredBeerList);
+    setDisplayBeers(filteredBeerList);
   };
 
-  const searchName = (selectedValue: string, filterChoice: string) => {
+  const searchName = (selectedValue: string) => {
     console.log(selectedValue);
-
     const searchedBeers = displayBeers.filter((beer) =>
       beer.name.includes(selectedValue)
     );
-
     console.log("searchedBeers", searchedBeers);
-    // setDisplayBeers(searchedBeers);
+    setDisplayBeers(searchedBeers);
   };
 
   return (
@@ -211,3 +188,67 @@ export default Main;
 //     }
 //   });
 // });
+
+// let maltSearch: Beer[] = [];
+// let hopsSearch: Beer[] = [];
+// let pairingSearch: Beer[] = [];
+// let abvSearch: Beer[] = [];
+
+// filterResult.forEach((result) => {
+//   displayBeers.forEach((beer) => {
+//     if (result.filterChoice === "Malt") {
+//       beer.ingredients.malt.forEach((malt) => {
+//         if (malt.name === result.selectedValue) {
+//           maltSearch.push(beer);
+//         }
+//       });
+//     } else if (result.filterChoice === "Hops") {
+//       beer.ingredients.hops.forEach((hops) => {
+//         if (hops.name === result.selectedValue) {
+//           hopsSearch.push(beer);
+//         }
+//       });
+//     } else if (result.filterChoice === "Abv") {
+//       if (beer.abv === Number(result.selectedValue)) {
+//         abvSearch.push(beer);
+//       }
+//     } else if (result.filterChoice === "Food pairing") {
+//       beer.food_pairing.forEach((pairing) => {
+//         if (pairing === result.selectedValue) {
+//           pairingSearch.push(beer);
+//         }
+//       });
+//     }
+//   });
+// });
+
+//// FILTER ARRAY RESULTS
+
+// filterResult.forEach((result) => {
+//   if (result.filterChoice === "Malt") {
+//     maltSearch = displayBeers.filter((beer) =>
+//       beer.ingredients.malt.some(
+//         (malt) => malt.name === result.selectedValue
+//       )
+//     );
+//   } else if (result.filterChoice === "Hops") {
+//     hopsSearch = displayBeers.filter((beer) =>
+//       beer.ingredients.hops.some(
+//         (hops) => hops.name === result.selectedValue
+//       )
+//     );
+//   } else if (result.filterChoice === "Abv") {
+//     abvSearch = displayBeers.filter(
+//       (beer) => beer.abv === Number(result.selectedValue)
+//     );
+//   } else if (result.filterChoice === "Food pairing") {
+//     pairingSearch = displayBeers.filter((beer) =>
+//       beer.food_pairing.includes(result.selectedValue)
+//     );
+//   }
+// });
+
+// console.log("malt search", maltSearch);
+// console.log("hops search", hopsSearch);
+// console.log("pairing search", pairingSearch);
+// console.log("abv search", abvSearch);

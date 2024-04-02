@@ -12,14 +12,14 @@ const FilterItem = ({
   sortOptions,
   filterChoice,
 }: FilterItemProps) => {
-  const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
-    readFilter(selectedValue, filterChoice);
+    readFilter(event.target.value, filterChoice);
   };
 
   return (
     <div className="filterItem__container">
-      <select onChange={handleSelect} className="filterItem__option">
+      <select onChange={handleChange} className="filterItem__option">
         {sortOptions.map((sortOption, index) => (
           <option className="filterItem__option" key={index}>
             {sortOption}

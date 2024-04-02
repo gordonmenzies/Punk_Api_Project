@@ -1,7 +1,7 @@
 import "./FilterList.scss";
 import FilterItem from "../FilterItem/FilterItem";
 import { Beer } from "../../assets/types";
-import beers from "../../assets/beers";
+import beers from "../../assets/dataFormatted";
 import SearchItem from "../SearchItem/SearchItem";
 
 type FilterListProps = {
