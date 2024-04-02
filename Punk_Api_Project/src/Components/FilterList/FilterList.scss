@@ -5,6 +5,16 @@
 
   .filterList__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .filterItem__container {
+      width: 200px;
+
+      .filterItem__option {
+        width: 200px;
+      }
+    }
   }
 }
 

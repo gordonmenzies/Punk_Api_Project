@@ -21,9 +21,7 @@ const Main = () => {
       { selectedValue: selectedValue, filterChoice: filterChoice },
     ]);
 
-    console.log(selectedValue, filterChoice);
-    console.log("displayBeers", displayBeers);
-    console.log("call filter array", filterArray(selectedValue, filterChoice));
+    filterArray(selectedValue, filterChoice);
   };
 
   const filterArray = (selectedValue: string, filterChoice: string) => {
@@ -60,19 +58,10 @@ const Main = () => {
       searchedBeers
     );
 
-    // remove any repeated items before displaying
+    // Check if the lists contain repeats
 
     console.log("filtered Beers", filteredBeerList);
     setDisplayBeers(filteredBeerList);
-  };
-
-  const searchName = (selectedValue: string) => {
-    console.log(selectedValue);
-    const searchedBeers = displayBeers.filter((beer) =>
-      beer.name.includes(selectedValue)
-    );
-    console.log("searchedBeers", searchedBeers);
-    setDisplayBeers(searchedBeers);
   };
 
   return (

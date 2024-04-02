@@ -6,11 +6,23 @@
   .navBar__container {
     border: solid 1px black;
     display: flex;
+    height: 30px;
 
     .navBar__heading {
       font-size: 10px;
       margin-left: 20px;
       color: rgb(211, 211, 107);
+    }
+    .navBar__selection--mobile {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-left: 50%;
+
+      .navBar__heading--mobile {
+        font-size: 10px;
+        margin-left: 20%;
+      }
     }
   }
 }
