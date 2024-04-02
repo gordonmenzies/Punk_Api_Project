@@ -4,7 +4,7 @@ import { ChangeEvent } from "react";
 type FilterItemProps = {
   filterChoice: string;
   sortOptions: string[];
-  readFilter: (selectedValue: string) => void;
+  readFilter: (selectedValue: string, filterChoice: string) => void;
 };
 
 const FilterItem = ({
@@ -14,7 +14,7 @@ const FilterItem = ({
 }: FilterItemProps) => {
   const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
-    readFilter(selectedValue);
+    readFilter(selectedValue, filterChoice);
   };
 
   return (

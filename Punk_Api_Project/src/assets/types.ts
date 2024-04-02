@@ -55,7 +55,7 @@ type MashTemp = {
   duration: number;
 };
 
-type Volume = {
+export type Volume = {
   value: number;
   unit: string;
 };

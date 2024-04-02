@@ -3,3 +3,5 @@
 Create Routing options for the NavBar and Random Beer in mobile view
 
 In Desktop View these will be dipayed differently, the majority of information will be on the main page.
+
+///// DUPLICATES NEED REMOVING FROM PREPPEDLISTS

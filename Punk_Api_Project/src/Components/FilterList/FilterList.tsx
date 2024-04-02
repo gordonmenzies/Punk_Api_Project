@@ -2,9 +2,11 @@ import "./FilterList.scss";
 import FilterItem from "../FilterItem/FilterItem";
 import { Beer } from "../../assets/types";
 import beers from "../../assets/beers";
+import SearchItem from "../SearchItem/SearchItem";
 
 type FilterListProps = {
-  readFilter: (string: string) => void;
+  readFilter: (selectedValue: string, filterChoice: string) => void;
+  searchName: (selectedValue: string, filterChoice: string) => void;
 };
 
 const preppedMaltList: string[] = [];
@@ -23,15 +25,20 @@ const identifyFoodPairings = (): string[] => {
 };
 
 beers.forEach((beer: Beer) => {
-  preppedMaltList.push(beer.ingredients.malt[0].name);
-  preppedHopsList.push(beer.ingredients.hops[0].name);
+  beer.ingredients.malt.forEach((malt) => {
+    preppedMaltList.push(malt.name);
+  });
+  beer.ingredients.hops.forEach((hops) => {
+    preppedHopsList.push(hops.name);
+  });
   preppedAbvList.push(beer.abv);
   preppedFoodPairingList = identifyFoodPairings();
 });
 
-const FilterList = ({ readFilter }: FilterListProps) => {
+const FilterList = ({ readFilter, searchName }: FilterListProps) => {
   return (
     <div className="filterList__container">
+      <SearchItem searchName={searchName} filterChoice="name Search" />
       <FilterItem
         readFilter={readFilter}
         filterChoice="Malt"
@@ -44,12 +51,12 @@ const FilterList = ({ readFilter }: FilterListProps) => {
       />
       <FilterItem
         readFilter={readFilter}
-        filterChoice="abv"
+        filterChoice="Abv"
         sortOptions={preppedAbvList.map((item) => String(item))}
       />
       <FilterItem
         readFilter={readFilter}
-        filterChoice="food pairing"
+        filterChoice="Food pairing"
         sortOptions={preppedFoodPairingList}
       />
     </div>
