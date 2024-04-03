@@ -6,7 +6,7 @@
   }
 
   .filterList__container {
-    background-color: #fdcb6e;
+    background-color: white;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -16,6 +16,7 @@
     bottom: 0;
     z-index: 2;
     align-items: center;
+    font-family: "Reddit Mono";
 
     h3 {
       margin-left: 360px;

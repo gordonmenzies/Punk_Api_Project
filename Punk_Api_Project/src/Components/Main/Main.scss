@@ -1,34 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: blue;
-  }
-
   .mainPage {
     display: flex;
     flex-direction: column;
-
-    .featuredBeer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      margin-left: 25%;
-      margin-right: 25%;
-      background-color: yellow;
-      margin-bottom: 20px;
-
-      h1 {
-        font-size: 10px;
-      }
-      img {
-        height: 80px;
-      }
-    }
+    align-items: center;
   }
 }
-
 @media screen and (min-width: 480px) {
   body {
     background-color: red;

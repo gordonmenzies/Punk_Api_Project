@@ -1,18 +1,9 @@
 import "./RandomBeer.scss";
+import { Beer } from "../../assets/types";
 
-type RandomBeerProps = {
-  name: string;
-  image_url: string;
-  description: string;
-  food_pairing: string[];
-};
+type RandomBeerProps = { beer: Beer };
 
-const RandomBeer = ({
-  name,
-  image_url,
-  description,
-  food_pairing,
-}: RandomBeerProps) => {
+const RandomBeer = ({ beer }: RandomBeerProps) => {
   const shortenString = (string: string): string => {
     const maxLength = 200;
     if (string.length <= maxLength) {
@@ -32,16 +23,22 @@ const RandomBeer = ({
   };
 
   return (
-    <div className="RandomBeer__container">
-      <h1 className="RandomBeer__heading">{name}</h1>
-      <div className="RandomBeer__content">
-        <img className="RandomBeer__image" src={image_url} />
-        <h2 className="RandomBeer__description">
-          {shortenString(description)}
-        </h2>
-        <div className="RandomBeer__pairingContainer">
-          <h3 className="RandomBeer__pairing">pairing</h3>
-          <h3 className="RandomBeer__pairing">{food_pairing}</h3>
+    <div className="randomBeer__container">
+      <h1 className="randomBeer__heading">{beer.name}</h1>
+      <div className="randomBeer__content">
+        <div className="randomBeer__imgAndDescription">
+          <img className="randomBeer__image" src={beer.image_url} />
+          <h2 className="randomBeer__description">{beer.description}</h2>
+        </div>
+        <div className="randomBeer__pairingContainer">
+          <h3 className="randomBeer__pairing">pairing</h3>
+          <h3 className="randomBeer__pairing">{beer.food_pairing}</h3>
+          <h3 className="randomBeer_percentage">Percentage</h3>
+          <h3 className="randomBeer_percentage">{beer.abv}% </h3>
+          <h3 className="randomBeer_BrewersTips">Brewers Tips </h3>
+          <h3 className="randomBeer_brewersTips">{beer.brewers_tips}% </h3>
+          <h3 className="randomBeer_firstBrewed">First Brewed</h3>
+          <h3 className="randomBeer_firstBrewed">{beer.first_brewed}% </h3>
         </div>
       </div>
     </div>

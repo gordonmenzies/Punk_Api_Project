@@ -12,17 +12,15 @@ const NavBar = ({ showFilter }: NavBarProps) => {
 
   return (
     <div className="navBar__container">
+      <h1 className="navBar__heading--filters" onClick={showFilter}>
+        Select Filters
+      </h1>
       <Link to="/" className="navBar__heading">
         PunkAPi
       </Link>
-      <div className="navBar__selection--mobile">
-        <h1 className="navBar__heading--mobile" onClick={showFilter}>
-          Select Filters
-        </h1>
-        <Link to="/randombeer" className="navBar__heading--mobile">
-          Random
-        </Link>
-      </div>
+      <Link to="/randombeer" className="navBar__heading--random">
+        Random
+      </Link>
     </div>
   );
 };

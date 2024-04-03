@@ -10,6 +10,12 @@
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+
+    input {
+      margin-top: 100px;
+      border-radius: 5px;
+      width: 90%;
+    }
   }
 }
 

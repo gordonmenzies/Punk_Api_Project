@@ -70,6 +70,12 @@ const Main = () => {
     setDisplayBeers(filteredBeerList);
   };
 
+  const randomBeerSelector = (): Beer => {
+    const randomIndex = Math.floor(Math.random() * displayBeers.length);
+
+    return displayBeers[randomIndex];
+  };
+
   return (
     <BrowserRouter>
       <div className="mainPage">
@@ -78,14 +84,7 @@ const Main = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="randombeer"
-            element={
-              <RandomBeer
-                name={"name"}
-                image_url="image_url"
-                description="description"
-                food_pairing={["one,two"]}
-              />
-            }
+            element={<RandomBeer beer={randomBeerSelector()} />}
           />
         </Routes>
         <div className="mainBody__container">

@@ -1,30 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: blue;
-  }
-
   .navBar__container {
-    border: solid 1px black;
+    border: solid 1px white;
     display: flex;
     height: 30px;
+    align-items: center;
+    font-family: "Reddit Mono";
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    width: 100%;
 
     .navBar__heading {
       font-size: 10px;
-      margin-left: 20px;
-      color: rgb(211, 211, 107);
+      margin-left: 25%;
+      margin-right: 34%;
+      color: black(211, 211, 107);
+      text-decoration: none;
     }
-    .navBar__selection--mobile {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      padding-left: 50%;
 
-      .navBar__heading--mobile {
-        font-size: 10px;
-        margin-left: 20%;
-      }
+    .navBar__heading:visited {
+      color: black;
+    }
+
+    .navBar__heading--filters {
+      font-size: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .navBar__heading--random {
+      font-size: 10px;
+      text-decoration: none;
+    }
+
+    .navBar__heading--random:visited {
+      color: black;
     }
   }
 }

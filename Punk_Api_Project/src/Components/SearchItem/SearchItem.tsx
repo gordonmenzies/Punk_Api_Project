@@ -14,8 +14,8 @@ const SearchItem = ({ searchName, filterChoice }: SearchItemProps) => {
 
   return (
     <div className="filterItem__container">
-      <p>{filterChoice}</p>
-      <input type="text" onChange={readFilter}></input>
+      <input type="text" onChange={readFilter} value="Name"></input>
+      <p>Name</p>
     </div>
   );
 };

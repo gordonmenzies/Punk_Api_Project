@@ -1,6 +1,8 @@
+@use "../../assets/color-variables.scss" as *;
+
 @media screen and (max-width: 480px) {
   body {
-    background-color: blue;
+    background-color: $background-blue;
   }
   .beerList {
     display: flex;

@@ -1,53 +1,56 @@
+@use "../../assets/color-variables.scss" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: blue;
-  }
-  .RandomBeer__container {
-    border: 1px solid black;
+  .randomBeer__container {
+    border: 1px solid white;
     text-align: center;
     width: 80%;
-    background-color: rgb(255, 255, 163);
+    background-color: white;
     border-radius: 15px;
     height: 60%;
     margin-bottom: 20px;
+    font-family: "Reddit Mono";
 
-    .RandomBeer__heading {
+    .randomBeer__heading {
       font-size: 10px;
     }
 
-    .RandomBeer__content {
+    .randomBeer__content {
       display: flex;
       justify-items: center;
       align-items: center;
+      flex-direction: column;
 
-      .RandomBeer__description {
-        margin-top: -5px;
-        padding-top: 10px;
-        margin-left: 5px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 8px;
-        background-color: rgb(123, 154, 248);
-        border-radius: 5px;
+      .randomBeer__imgAndDescription {
+        display: flex;
+
+        .randomBeer__image {
+          height: 100px;
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+        .randomBeer__description {
+          margin-top: -5px;
+          padding-top: 10px;
+          margin-left: 5px;
+          padding-bottom: 10px;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-size: 8px;
+          background-color: white(123, 154, 248);
+          border-radius: 5px;
+        }
       }
 
-      .RandomBeer__pairingContainer {
+      .randomBeer__pairingContainer {
         margin-top: -20px;
-        .RandomBeer__pairing {
+        .randomBeer__pairing {
           margin-left: 20px;
           margin-right: 20px;
           font-size: 8px;
         }
-      }
-
-      .RandomBeer__image {
-        margin-top: -10px;
-        height: 100px;
-        margin-left: 20px;
-        margin-bottom: 10px;
       }
     }
   }
@@ -58,28 +61,28 @@
     background-color: red;
   }
 
-  .RandomBeer__content {
+  .randomBeer__content {
     border: 1px solid black;
     text-align: center;
 
-    .RandomBeer__heading {
+    .randomBeer__heading {
       font-size: 10px;
     }
 
-    .RandomBeer__description {
+    .randomBeer__description {
       padding-left: 20px;
       padding-right: 20px;
       font-size: 8px;
       background-color: rgb(123, 154, 248);
     }
 
-    .RandomBeer__pairing {
+    .randomBeer__pairing {
       margin-left: 20px;
       margin-right: 20px;
       font-size: 8px;
     }
 
-    .RandomBeer__image {
+    .randomBeer__image {
       height: 50px;
       margin-left: 20px;
     }

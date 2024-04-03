@@ -2,7 +2,6 @@ import "./Home.scss";
 import beers from "../../assets/dataFormatted.ts";
 import FilterList from "../../Components/FilterList/FilterList.tsx";
 import BeerList from "../../Components/BeerList/BeerList.tsx";
-import NavBar from "../../Components/NavBar/NavBar.tsx";
 import { Beer } from "../../assets/types";
 import { useState } from "react";
 

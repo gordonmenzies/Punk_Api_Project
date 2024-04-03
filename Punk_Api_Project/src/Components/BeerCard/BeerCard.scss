@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@use "../../assets/color-variables.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: blue;
-  }
   .beerCard__container {
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
     width: 80%;
-    background-color: rgb(255, 255, 163);
+    background-color: white;
     border-radius: 15px;
     height: 60%;
     margin-bottom: 20px;
+    font-family: "Reddit Mono";
 
     .beerCard__heading {
       font-size: 10px;
@@ -30,7 +30,7 @@
         padding-left: 5px;
         padding-right: 5px;
         font-size: 8px;
-        background-color: rgb(123, 154, 248);
+        background-color: white(123, 154, 248);
         border-radius: 5px;
       }
 
