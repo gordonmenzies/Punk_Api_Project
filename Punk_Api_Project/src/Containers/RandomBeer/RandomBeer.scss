@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+  .RandomBeer__container {
+    border: 1px solid black;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(255, 255, 163);
+    border-radius: 15px;
+    height: 60%;
+    margin-bottom: 20px;
+
+    .RandomBeer__heading {
+      font-size: 10px;
+    }
+
+    .RandomBeer__content {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      .RandomBeer__description {
+        margin-top: -5px;
+        padding-top: 10px;
+        margin-left: 5px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 8px;
+        background-color: rgb(123, 154, 248);
+        border-radius: 5px;
+      }
+
+      .RandomBeer__pairingContainer {
+        margin-top: -20px;
+        .RandomBeer__pairing {
+          margin-left: 20px;
+          margin-right: 20px;
+          font-size: 8px;
+        }
+      }
+
+      .RandomBeer__image {
+        margin-top: -10px;
+        height: 100px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+
+  .RandomBeer__content {
+    border: 1px solid black;
+    text-align: center;
+
+    .RandomBeer__heading {
+      font-size: 10px;
+    }
+
+    .RandomBeer__description {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 8px;
+      background-color: rgb(123, 154, 248);
+    }
+
+    .RandomBeer__pairing {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 8px;
+    }
+
+    .RandomBeer__image {
+      height: 50px;
+      margin-left: 20px;
+    }
+  }
+}

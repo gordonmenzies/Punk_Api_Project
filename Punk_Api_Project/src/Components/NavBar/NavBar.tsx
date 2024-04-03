@@ -1,4 +1,5 @@
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
 
 type NavBarProps = {
   showFilter: () => void;
@@ -11,12 +12,16 @@ const NavBar = ({ showFilter }: NavBarProps) => {
 
   return (
     <div className="navBar__container">
-      <h1 className="navBar__heading">PunkAPi</h1>
+      <Link to="/" className="navBar__heading">
+        PunkAPi
+      </Link>
       <div className="navBar__selection--mobile">
         <h1 className="navBar__heading--mobile" onClick={showFilter}>
           Select Filters
         </h1>
-        <h1 className="navBar__heading--mobile">Random</h1>
+        <Link to="/randombeer" className="navBar__heading--mobile">
+          Random
+        </Link>
       </div>
     </div>
   );

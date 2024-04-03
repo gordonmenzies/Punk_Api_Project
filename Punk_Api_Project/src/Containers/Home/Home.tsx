@@ -1,20 +1,17 @@
-import "./Main.scss";
+import "./Home.scss";
 import beers from "../../assets/dataFormatted.ts";
-import FilterList from "../FilterList/FilterList";
-import BeerList from "../BeerList/BeerList";
-import NavBar from "../NavBar/NavBar";
+import FilterList from "../../Components/FilterList/FilterList.tsx";
+import BeerList from "../../Components/BeerList/BeerList.tsx";
+import NavBar from "../../Components/NavBar/NavBar.tsx";
 import { Beer } from "../../assets/types";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RandomBeer from "../../Containers/RandomBeer/RandomBeer.tsx";
-import Home from "../../Containers/Home/Home.tsx";
 
 type FilterResult = {
   selectedValue: string;
   filterChoice: string;
 };
 
-const Main = () => {
+const Home = () => {
   const [displayBeers, setDisplayBeers] = useState<Beer[]>(beers);
   const [filterResult, setFilterResult] = useState<FilterResult[]>([]);
   const [showFilterList, setShowFilterList] = useState(false);
@@ -71,38 +68,15 @@ const Main = () => {
   };
 
   return (
-    <BrowserRouter>
-      <div className="mainPage">
-        <NavBar showFilter={toggleFilterList} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="randombeer"
-            element={
-              <RandomBeer
-                name={"name"}
-                image_url="image_url"
-                description="description"
-                food_pairing={["one,two"]}
-              />
-            }
-          />
-        </Routes>
-        <div className="mainBody__container">
-          {showFilterList && (
-            <FilterList readFilter={readFilter} showFilter={toggleFilterList} />
-          )}
-        </div>
+    <div className="mainPage">
+      <div className="mainBody__container">
+        {showFilterList && (
+          <FilterList readFilter={readFilter} showFilter={toggleFilterList} />
+        )}
+        <BeerList beers={displayBeers} />
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
-export default Main;
-
-{
-  /* <div className="featuredBeer"> 
-        <h1>Featured Beer</h1>
-        <img src={`${beers[0].image_url}`} />
-      </div> */
-}
+export default Home;
