@@ -14,6 +14,11 @@ type FilterResult = {
 const Main = () => {
   const [displayBeers, setDisplayBeers] = useState<Beer[]>(beers);
   const [filterResult, setFilterResult] = useState<FilterResult[]>([]);
+  const [showFilterList, setShowFilterList] = useState(true);
+
+  const toggleFilterList = () => {
+    setShowFilterList(!showFilterList);
+  };
 
   const readFilter = (selectedValue: string, filterChoice: string) => {
     setFilterResult([
@@ -59,20 +64,20 @@ const Main = () => {
     );
 
     // Check if the lists contain repeats
-
-    console.log("filtered Beers", filteredBeerList);
     setDisplayBeers(filteredBeerList);
   };
 
   return (
     <div className="mainPage">
-      <NavBar />
+      <NavBar showFilter={toggleFilterList} />
       <div className="featuredBeer">
         <h1>Featured Beer</h1>
         <img src={`${beers[0].image_url}`} />
       </div>
       <div className="mainBody__container">
-        <FilterList readFilter={readFilter} />
+        {showFilterList && (
+          <FilterList readFilter={readFilter} showFilter={toggleFilterList} />
+        )}
         <BeerList beers={displayBeers} />
       </div>
     </div>

@@ -19,16 +19,15 @@ const FilterItem = ({
   // filter duplicates from sort options
   const removeDuplicatesAndOrganise = (sortOptions: string[]): string[] => {
     let uniqueArray = Array.from(new Set(sortOptions));
-    if (typeof uniqueArray[0] === typeof 0) {
-      const numberArray = sortOptions.map(Number).sort((a, b) => a - b);
-      const sortedStringArray = numberArray.map((number) => {
-        String(number);
-      });
-      return sortedStringArray;
+
+    if (typeof uniqueArray[0] === "string") {
+      uniqueArray = uniqueArray.sort(); // Sort alphabetically
     } else {
-      uniqueArray = uniqueArray.sort();
-      return uniqueArray;
+      const numberArray = uniqueArray.map(Number).sort((a, b) => a - b); // Convert to numbers and sort
+      uniqueArray = numberArray.map(String); // Convert back to strings
     }
+
+    return uniqueArray;
   };
 
   return (

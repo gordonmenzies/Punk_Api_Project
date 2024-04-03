@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+
+  .filterItem__container {
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+  .filterItem__container {
+    width: 200px;
+
+    .filterItem__option {
+      width: 200px;
+    }
+  }
+}

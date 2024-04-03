@@ -1,16 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
 @media screen and (max-width: 480px) {
   body {
     background-color: blue;
   }
 
   .filterList__container {
+    background-color: #fdcb6e;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
     align-items: center;
 
-    .filterItem__container {
-      width: 200px;
+    h3 {
+      margin-left: 360px;
+      font-size: 14px;
+      color: rgb(97, 97, 97);
+    }
 
+    .filterItem__container {
       .filterItem__option {
         width: 200px;
       }

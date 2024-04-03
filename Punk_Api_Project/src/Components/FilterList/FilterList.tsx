@@ -6,7 +6,7 @@ import SearchItem from "../SearchItem/SearchItem";
 
 type FilterListProps = {
   readFilter: (selectedValue: string, filterChoice: string) => void;
-  searchName: (selectedValue: string, filterChoice: string) => void;
+  showFilter: () => void;
 };
 
 const preppedMaltList: string[] = [];
@@ -35,9 +35,10 @@ beers.forEach((beer: Beer) => {
   preppedFoodPairingList = identifyFoodPairings();
 });
 
-const FilterList = ({ readFilter }: FilterListProps) => {
+const FilterList = ({ showFilter, readFilter }: FilterListProps) => {
   return (
     <div className="filterList__container">
+      <h3 onClick={showFilter}>close menu</h3>
       <SearchItem searchName={readFilter} filterChoice="name Search" />
       <FilterItem
         readFilter={readFilter}
