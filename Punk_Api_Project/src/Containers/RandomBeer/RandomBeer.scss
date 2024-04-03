@@ -57,51 +57,62 @@
 }
 
 @media screen and (min-width: 480px) {
-  .randomBeer__container {
-    border: 1px solid white;
-    text-align: center;
-    width: 40%;
-    background-color: white;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    font-family: "Reddit Mono";
-    margin-left: 7%;
+  .randomBeer__background {
+    background-color: $background-blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    .randomBeer__container {
+      border: 1px solid white;
+      text-align: center;
+      width: 80%;
+      background-color: white;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      margin-left: 10%;
+      margin-right: 30%;
+      margin-top: 10%;
+      font-family: "Reddit Mono";
 
-    .randomBeer__heading {
-      font-size: 10px;
-    }
-
-    .randomBeer__content {
-      display: flex;
-      justify-items: center;
-      align-items: center;
-
-      .randomBeer__description {
-        margin-top: -5px;
-        padding-top: 10px;
-        margin-left: 5px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 8px;
-        background-color: white(123, 154, 248);
-        border-radius: 5px;
+      .randomBeer__heading {
+        font-size: 10px;
       }
 
-      .randomBeer__pairingContainer {
-        margin-top: -20px;
-        .randomBeer__pairing {
-          margin-left: 20px;
-          margin-right: 20px;
+      .randomBeer__content {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        .randomBeer__description {
+          margin-top: -5px;
+          padding-top: 10px;
+          margin-left: 5px;
+          padding-bottom: 10px;
+          padding-left: 5px;
+          padding-right: 5px;
           font-size: 8px;
+          background-color: white(123, 154, 248);
+          border-radius: 5px;
         }
-      }
 
-      .randomBeer__image {
-        margin-top: -10px;
-        height: 100px;
-        margin-left: 20px;
-        margin-bottom: 10px;
+        .randomBeer__pairingContainer {
+          margin-top: -20px;
+          .randomBeer__pairing {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 8px;
+          }
+        }
+
+        .randomBeer__image {
+          margin-top: -10px;
+          height: 100px;
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

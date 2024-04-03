@@ -14,17 +14,19 @@ const preppedHopsList: string[] = [];
 const preppedAbvList: number[] = [];
 let preppedFoodPairingList: string[] = [];
 
-const identifyFoodPairings = (Beers: Beer[]): string[] => {
-  let list: string[] = [];
-  Beers.forEach((beer) => {
-    beer.food_pairing.forEach((pairing) => {
-      list.push(pairing);
-    });
-  });
-  return list;
-};
-
 const FilterList = ({ Beers, showFilter, readFilter }: FilterListProps) => {
+  console.log("Beers", Beers);
+
+  const identifyFoodPairings = (Beers: Beer[]): string[] => {
+    let list: string[] = [];
+    Beers.forEach((beer) => {
+      beer.food_pairing.forEach((pairing) => {
+        list.push(pairing);
+      });
+    });
+    return list;
+  };
+
   Beers.forEach((beer: Beer) => {
     beer.ingredients.malt.forEach((malt) => {
       preppedMaltList.push(malt.name);

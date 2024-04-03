@@ -6,7 +6,7 @@ import { Beer } from "../../assets/types";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RandomBeer from "../../Containers/RandomBeer/RandomBeer.tsx";
-import Home from "../../Containers/Home/Home.tsx";
+import BeerList from "../BeerList/BeerList.tsx";
 
 type FilterResult = {
   selectedValue: string;
@@ -28,7 +28,7 @@ const Main = () => {
       ...filterResult,
       { selectedValue: selectedValue, filterChoice: filterChoice },
     ]);
-    console.log("reached");
+    console.log("reached main");
     filterArray(selectedValue, filterChoice);
   };
 
@@ -38,6 +38,8 @@ const Main = () => {
     let pairingSearch: Beer[] = [];
     let abvSearch: Beer[] = [];
     let searchedBeers: Beer[] = [];
+
+    console.log("reached filterarray method main");
 
     if (filterChoice === "Malt") {
       maltSearch = beers.filter((beer) =>
@@ -59,6 +61,11 @@ const Main = () => {
       console.log("searchedBeers", searchedBeers);
     }
 
+    console.log("hopsSearch", hopsSearch);
+    console.log("pairingSearch", pairingSearch);
+    console.log("Abvsearch", abvSearch);
+    console.log("searchedBeers", searchedBeers);
+
     const filteredBeerList = maltSearch.concat(
       hopsSearch,
       pairingSearch,
@@ -66,8 +73,9 @@ const Main = () => {
       searchedBeers
     );
 
+    console.log("filteredBeerList", filteredBeerList);
     setDisplayBeers(filteredBeerList);
-    console.log(displayBeers);
+    console.log("display beers", displayBeers);
   };
 
   const randomBeerSelector = (): Beer => {
@@ -87,9 +95,9 @@ const Main = () => {
               readFilter={readFilter}
               showFilter={toggleFilterList}
             />
+            <BeerList beers={displayBeers} />
           </div>
           <Routes>
-            <Route path="/" element={<Home />} />
             <Route
               path="randombeer"
               element={<RandomBeer beer={randomBeerSelector()} />}

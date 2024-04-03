@@ -6,10 +6,6 @@ type NavBarProps = {
 };
 
 const NavBar = ({ showFilter }: NavBarProps) => {
-  // const showFilter = () => {
-  //   setShowFilterList(!showFilterList)
-  // }
-
   return (
     <div className="navBar__container">
       <h1 className="navBar__heading--filters" onClick={showFilter}>
