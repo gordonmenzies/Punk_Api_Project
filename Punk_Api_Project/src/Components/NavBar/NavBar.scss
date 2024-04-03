@@ -10,7 +10,7 @@
     border-radius: 10px;
     background-color: white;
     margin-bottom: 20px;
-    width: 100%;
+    width: 95%;
 
     .navBar__heading {
       font-size: 10px;
@@ -42,22 +42,41 @@
 }
 
 @media screen and (min-width: 480px) {
-  body {
-    background-color: red;
-  }
-
   .navBar__container {
-    border: solid 1px black;
+    border: solid 1px white;
     display: flex;
+    height: 30px;
+    align-items: center;
+    margin-left: 15%;
+    font-family: "Reddit Mono";
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    width: 70%;
 
     .navBar__heading {
-      font-size: 30px;
-      margin-left: 20px;
-      color: rgb(211, 211, 107);
+      font-size: 10px;
+      margin-left: 25%;
+      margin-right: 34%;
+      color: black(211, 211, 107);
+      text-decoration: none;
     }
 
-    .navBar__heading--mobile {
+    .navBar__heading:visited {
+      color: black;
+    }
+
+    .navBar__heading--filters {
       display: none;
+    }
+
+    .navBar__heading--random {
+      font-size: 10px;
+      text-decoration: none;
+    }
+
+    .navBar__heading--random:visited {
+      color: black;
     }
   }
 }

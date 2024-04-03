@@ -1,7 +1,6 @@
 import "./Main.scss";
 import beers from "../../assets/dataFormatted.ts";
 import FilterList from "../FilterList/FilterList";
-import BeerList from "../BeerList/BeerList";
 import NavBar from "../NavBar/NavBar";
 import { Beer } from "../../assets/types";
 import { useState } from "react";
@@ -21,6 +20,7 @@ const Main = () => {
 
   const toggleFilterList = () => {
     setShowFilterList(!showFilterList);
+    console.log(showFilterList);
   };
 
   const readFilter = (selectedValue: string, filterChoice: string) => {
@@ -28,7 +28,7 @@ const Main = () => {
       ...filterResult,
       { selectedValue: selectedValue, filterChoice: filterChoice },
     ]);
-
+    console.log("reached");
     filterArray(selectedValue, filterChoice);
   };
 
@@ -66,8 +66,8 @@ const Main = () => {
       searchedBeers
     );
 
-    // Check if the lists contain repeats
     setDisplayBeers(filteredBeerList);
+    console.log(displayBeers);
   };
 
   const randomBeerSelector = (): Beer => {
@@ -78,19 +78,34 @@ const Main = () => {
 
   return (
     <BrowserRouter>
-      <div className="mainPage">
+      <div className="mainPage--check">
         <NavBar showFilter={toggleFilterList} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="randombeer"
-            element={<RandomBeer beer={randomBeerSelector()} />}
-          />
-        </Routes>
-        <div className="mainBody__container">
-          {showFilterList && (
-            <FilterList readFilter={readFilter} showFilter={toggleFilterList} />
-          )}
+        <div className="mainPage__filterListAndContent">
+          <div className="mainBody__filterList--desktop">
+            <FilterList
+              Beers={displayBeers}
+              readFilter={readFilter}
+              showFilter={toggleFilterList}
+            />
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="randombeer"
+              element={<RandomBeer beer={randomBeerSelector()} />}
+            />
+          </Routes>
+          <div className="mainBody__filterList--mobile">
+            <div className="mainBody__container">
+              {showFilterList && (
+                <FilterList
+                  readFilter={readFilter}
+                  showFilter={toggleFilterList}
+                  Beers={displayBeers}
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </BrowserRouter>

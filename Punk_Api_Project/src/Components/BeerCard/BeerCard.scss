@@ -54,34 +54,53 @@
 }
 
 @media screen and (min-width: 480px) {
-  body {
-    background-color: red;
-  }
-
-  .beerCard__content {
-    border: 1px solid black;
+  .beerCard__container {
+    border: 1px solid white;
     text-align: center;
+    width: 40%;
+    background-color: white;
+    border-radius: 15px;
+    height: 150px;
+    margin-bottom: 20px;
+    font-family: "Reddit Mono";
+    margin-left: 7%;
 
     .beerCard__heading {
       font-size: 10px;
     }
 
-    .beerCard__description {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 8px;
-      background-color: rgb(123, 154, 248);
-    }
+    .beerCard__content {
+      display: flex;
+      justify-items: center;
+      align-items: center;
 
-    .beerCard__pairing {
-      margin-left: 20px;
-      margin-right: 20px;
-      font-size: 8px;
-    }
+      .beerCard__description {
+        margin-top: -5px;
+        padding-top: 10px;
+        margin-left: 5px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px;
+        background-color: white(123, 154, 248);
+        border-radius: 5px;
+      }
 
-    .beerCard__image {
-      height: 50px;
-      margin-left: 20px;
+      .beerCard__pairingContainer {
+        margin-top: -20px;
+        .beerCard__pairing {
+          margin-left: 20px;
+          margin-right: 20px;
+          font-size: 10px;
+        }
+      }
+
+      .beerCard__image {
+        margin-top: -10px;
+        height: 100px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
     }
   }
 }

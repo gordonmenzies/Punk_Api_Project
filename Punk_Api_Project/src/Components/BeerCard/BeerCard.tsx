@@ -38,7 +38,6 @@ const BeerCard = ({
         <img className="beerCard__image" src={image_url} />
         <h2 className="beerCard__description">{shortenString(description)}</h2>
         <div className="beerCard__pairingContainer">
-          <h3 className="beerCard__pairing">pairing</h3>
           <h3 className="beerCard__pairing">{food_pairing}</h3>
         </div>
       </div>

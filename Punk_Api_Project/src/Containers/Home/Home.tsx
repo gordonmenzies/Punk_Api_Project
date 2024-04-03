@@ -24,7 +24,7 @@ const Home = () => {
       ...filterResult,
       { selectedValue: selectedValue, filterChoice: filterChoice },
     ]);
-
+    console.log("reached");
     filterArray(selectedValue, filterChoice);
   };
 
@@ -64,13 +64,18 @@ const Home = () => {
 
     // Check if the lists contain repeats
     setDisplayBeers(filteredBeerList);
+    console.log("Reached");
   };
 
   return (
     <div className="mainPage">
       <div className="mainBody__container">
         {showFilterList && (
-          <FilterList readFilter={readFilter} showFilter={toggleFilterList} />
+          <FilterList
+            Beers={displayBeers}
+            readFilter={readFilter}
+            showFilter={toggleFilterList}
+          />
         )}
         <BeerList beers={displayBeers} />
       </div>

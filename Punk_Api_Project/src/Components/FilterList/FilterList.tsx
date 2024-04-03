@@ -1,12 +1,12 @@
 import "./FilterList.scss";
 import FilterItem from "../FilterItem/FilterItem";
 import { Beer } from "../../assets/types";
-import beers from "../../assets/dataFormatted";
 import SearchItem from "../SearchItem/SearchItem";
 
 type FilterListProps = {
   readFilter: (selectedValue: string, filterChoice: string) => void;
   showFilter: () => void;
+  Beers: Beer[];
 };
 
 const preppedMaltList: string[] = [];
@@ -14,9 +14,9 @@ const preppedHopsList: string[] = [];
 const preppedAbvList: number[] = [];
 let preppedFoodPairingList: string[] = [];
 
-const identifyFoodPairings = (): string[] => {
+const identifyFoodPairings = (Beers: Beer[]): string[] => {
   let list: string[] = [];
-  beers.forEach((beer) => {
+  Beers.forEach((beer) => {
     beer.food_pairing.forEach((pairing) => {
       list.push(pairing);
     });
@@ -24,18 +24,18 @@ const identifyFoodPairings = (): string[] => {
   return list;
 };
 
-beers.forEach((beer: Beer) => {
-  beer.ingredients.malt.forEach((malt) => {
-    preppedMaltList.push(malt.name);
+const FilterList = ({ Beers, showFilter, readFilter }: FilterListProps) => {
+  Beers.forEach((beer: Beer) => {
+    beer.ingredients.malt.forEach((malt) => {
+      preppedMaltList.push(malt.name);
+    });
+    beer.ingredients.hops.forEach((hops) => {
+      preppedHopsList.push(hops.name);
+    });
+    preppedAbvList.push(beer.abv);
+    preppedFoodPairingList = identifyFoodPairings(Beers);
   });
-  beer.ingredients.hops.forEach((hops) => {
-    preppedHopsList.push(hops.name);
-  });
-  preppedAbvList.push(beer.abv);
-  preppedFoodPairingList = identifyFoodPairings();
-});
 
-const FilterList = ({ showFilter, readFilter }: FilterListProps) => {
   return (
     <div className="filterList__container">
       <h3 onClick={showFilter}>close menu</h3>
