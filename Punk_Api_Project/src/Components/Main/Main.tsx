@@ -182,6 +182,7 @@ const Main = () => {
                   Beers={displayBeers}
                 />
               )}
+              <BeerList beers={displayBeers} />
             </div>
           </div>
         </div>

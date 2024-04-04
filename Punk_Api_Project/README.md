@@ -1,7 +1,3 @@
-Nationality // Random Beer Selection Animation // Carousel Styling // Beer Production Timeline // Tag Selection // Find Where To Purchase // Price Comparison
+centre select filters into center on mobile
 
-NEED TO DO - ADD RADIO BUTTONS AS SHOWN ON THE PDF - UPDATE CARD STYLES - MAKE SURE FILTER LIST BUTTONS ARE DISPLAYING CORRECTLY and are SORTED -- ADAPT FOOD PAIRING SO IT SAYS HOW MANY ARE SHOWN
-
-// CONSIDER ADDING HOW MANY ARE DIPLAYED FEATURE
-
-// CONSIDER ADDING TAG FEATURE
+get search and radio buttons to work together
