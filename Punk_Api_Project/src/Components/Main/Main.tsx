@@ -17,66 +17,136 @@ const Main = () => {
   const [displayBeers, setDisplayBeers] = useState<Beer[]>(beers);
   const [filterResult, setFilterResult] = useState<FilterResult[]>([]);
   const [showFilterList, setShowFilterList] = useState(false);
+  const [prevDisplaybeers, setprevDisplaybeers] = useState<Beer[]>(beers);
 
   const toggleFilterList = () => {
     setShowFilterList(!showFilterList);
     console.log(showFilterList);
   };
 
-  const readFilter = (selectedValue: string, filterChoice: string) => {
-    setFilterResult([
-      ...filterResult,
-      { selectedValue: selectedValue, filterChoice: filterChoice },
-    ]);
-    console.log("reached main");
-    filterArray(selectedValue, filterChoice);
+  // const updateFilterState = (filterChoice: string, selectedValue: string) => {
+
+  // };
+
+  const compareArrays = (selectedBeers: Beer[], update: boolean) => {
+    if (update === false) {
+      const includedInBothArrays = displayBeers.filter((beer) =>
+        selectedBeers.includes(beer)
+      );
+      setDisplayBeers(includedInBothArrays);
+    } else {
+      setDisplayBeers(selectedBeers);
+    }
+
+    console.log("selectedBeers", selectedBeers);
+    console.log("displayBeers", displayBeers);
   };
 
-  const filterArray = (selectedValue: string, filterChoice: string) => {
+  const readExistingFilters = (selectedValue: string, filterChoice: string) => {
+    console.log("filterResult start", filterResult);
+    // Function to find an object containing the matching value
+    const isTrue = filterResult.find(
+      (result) => result.filterChoice === filterChoice
+    );
+
+    // Check if an object was found
+    if (isTrue) {
+      const newArray = [...filterResult];
+      // check to see if there is an instance of that filter already in the array
+      newArray.forEach((result) => {
+        if (filterChoice === result.filterChoice) {
+          console.log("repeat filter selected");
+          // if there is replace the previous selected valued with the new selcted value
+          result.selectedValue = selectedValue;
+          // set the new array state
+          setFilterResult(newArray);
+          filterArray(selectedValue, filterChoice, true);
+        }
+      });
+    } else {
+      // add the filter result to the end of the array
+      setFilterResult([
+        ...filterResult,
+        { selectedValue: selectedValue, filterChoice: filterChoice },
+      ]);
+      filterArray(selectedValue, filterChoice, false);
+    }
+    console.log("filterResult end", filterResult);
+    console.log(filterResult);
+  };
+
+  const filterArray = (
+    selectedValue: string,
+    filterChoice: string,
+    update: boolean
+  ) => {
     let maltSearch: Beer[] = [];
     let hopsSearch: Beer[] = [];
     let pairingSearch: Beer[] = [];
     let abvSearch: Beer[] = [];
     let searchedBeers: Beer[] = [];
+    let highAbvBeers: Beer[] = [];
+    let acidicPhBeers: Beer[] = [];
+    let classicRangeBeers: Beer[] = [];
 
-    console.log("reached filterarray method main");
-
-    if (filterChoice === "Malt") {
-      maltSearch = beers.filter((beer) =>
-        beer.ingredients.malt.some((malt) => malt.name === selectedValue)
-      );
-    } else if (filterChoice === "Hops") {
-      hopsSearch = beers.filter((beer) =>
-        beer.ingredients.hops.some((hops) => hops.name === selectedValue)
-      );
-    } else if (filterChoice === "Abv") {
-      abvSearch = beers.filter((beer) => beer.abv === Number(selectedValue));
-    } else if (filterChoice === "Food pairing") {
-      pairingSearch = beers.filter((beer) =>
-        beer.food_pairing.includes(selectedValue)
-      );
-    } else if (filterChoice === "name Search") {
+    // if (selectedValue === "Select An Option") {
+    //   if (filterChoice === "Malt") {
+    //     maltSearch = beers;
+    //     compareArrays(maltSearch, true);
+    //   } else if (filterChoice === "Hops") {
+    //     hopsSearch = beers;
+    //     compareArrays(hopsSearch, true);
+    //   } else if (filterChoice === "Abv") {
+    //     abvSearch = beers;
+    //     compareArrays(abvSearch, true);
+    //   } else if (filterChoice === "Food pairing") {
+    //     pairingSearch = beers;
+    //     compareArrays(pairingSearch, true);
+    //   }
+    // } else {
+    // if (filterChoice === "Malt") {
+    //   console.log("filterChoice", filterChoice);
+    //   maltSearch = beers.filter((beer) =>
+    //     beer.ingredients.malt.some((malt) => malt.name === selectedValue)
+    //   );
+    //   compareArrays(maltSearch, update);
+    // } else if (filterChoice === "Hops") {
+    //   hopsSearch = beers.filter((beer) =>
+    //     beer.ingredients.hops.some((hops) => hops.name === selectedValue)
+    //   );
+    //   compareArrays(hopsSearch, update);
+    // } else if (filterChoice === "Abv") {
+    //   abvSearch = beers.filter((beer) => beer.abv === Number(selectedValue));
+    //   compareArrays(abvSearch, update);
+    // } else if (filterChoice === "Food pairing") {
+    //   pairingSearch = beers.filter((beer) =>
+    //     beer.food_pairing.includes(selectedValue)
+    //   );
+    //   compareArrays(pairingSearch, update);
+    // } else
+    if (filterChoice === "name Search") {
       console.log(selectedValue);
       searchedBeers = beers.filter((beer) => beer.name.includes(selectedValue));
-      console.log("searchedBeers", searchedBeers);
+      if (selectedValue === "") {
+        searchedBeers = beers;
+      }
+      compareArrays(searchedBeers, update);
+    } else if (filterChoice === "High ABV > 6.0%") {
+      highAbvBeers = beers.filter((beer) => beer.abv > 6);
+      compareArrays(highAbvBeers, update);
+    } else if (filterChoice === "Acidic ph < 4") {
+      acidicPhBeers = beers.filter((beer) => beer.ph < 4);
+      compareArrays(acidicPhBeers, update);
+    } else if (filterChoice === "Classic Range") {
+      beers.forEach((beer) => {
+        if (Number(beer.first_brewed.split("/")[1]) < 2010) {
+          classicRangeBeers.push(beer);
+        }
+      });
+      compareArrays(classicRangeBeers, update);
     }
-
-    console.log("hopsSearch", hopsSearch);
-    console.log("pairingSearch", pairingSearch);
-    console.log("Abvsearch", abvSearch);
-    console.log("searchedBeers", searchedBeers);
-
-    const filteredBeerList = maltSearch.concat(
-      hopsSearch,
-      pairingSearch,
-      abvSearch,
-      searchedBeers
-    );
-
-    console.log("filteredBeerList", filteredBeerList);
-    setDisplayBeers(filteredBeerList);
-    console.log("display beers", displayBeers);
   };
+  //};
 
   const randomBeerSelector = (): Beer => {
     const randomIndex = Math.floor(Math.random() * displayBeers.length);
@@ -92,7 +162,7 @@ const Main = () => {
           <div className="mainBody__filterList--desktop">
             <FilterList
               Beers={displayBeers}
-              readFilter={readFilter}
+              readFilter={readExistingFilters}
               showFilter={toggleFilterList}
             />
             <BeerList beers={displayBeers} />
@@ -107,7 +177,7 @@ const Main = () => {
             <div className="mainBody__container">
               {showFilterList && (
                 <FilterList
-                  readFilter={readFilter}
+                  readFilter={readExistingFilters}
                   showFilter={toggleFilterList}
                   Beers={displayBeers}
                 />
@@ -128,3 +198,31 @@ export default Main;
         <img src={`${beers[0].image_url}`} />
       </div> */
 }
+
+// beers.forEach((beer) => {
+//   if (
+//     maltSearch.includes(beer) &&
+//     pairingSearch.includes(beer) &&
+//     abvSearch.includes(beer) &&
+//     hopsSearch.includes(beer) &&
+//     searchedBeers.includes(beer)
+//   ) {
+//     filteredBeerList.push();
+//   }
+// });
+
+// const filteredBeerList = maltSearch.concat(
+//   hopsSearch,
+//   pairingSearch,
+//   abvSearch,
+//   searchedBeers,
+//   highAbvBeers,
+//   acidicPhBeers,
+//   classicRangeBeers
+// );
+
+// console.log("maltSearch", maltSearch);
+// console.log("hopsSearch", hopsSearch);
+// console.log("pairingSearch", pairingSearch);
+// console.log("Abvsearch", abvSearch);
+// console.log("searchedBeers", searchedBeers);

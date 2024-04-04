@@ -26,13 +26,13 @@ const FilterItem = ({
       const numberArray = uniqueArray.map(Number).sort((a, b) => a - b); // Convert to numbers and sort
       uniqueArray = numberArray.map(String); // Convert back to strings
     }
-
     return uniqueArray;
   };
 
   return (
     <div className="filterItem__container">
       <select onChange={handleChange} className="filterItem__option">
+        <option>Select An Option</option>
         {removeDuplicatesAndOrganise(sortOptions).map((sortOption, index) => (
           <option className="filterItem__option" key={index}>
             {sortOption}
