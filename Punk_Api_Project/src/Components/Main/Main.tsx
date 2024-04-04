@@ -17,7 +17,7 @@ const Main = () => {
   const [displayBeers, setDisplayBeers] = useState<Beer[]>(beers);
   const [filterResult, setFilterResult] = useState<FilterResult[]>([]);
   const [showFilterList, setShowFilterList] = useState(false);
-  const [prevDisplaybeers, setprevDisplaybeers] = useState<Beer[]>(beers);
+  // const [prevDisplaybeers, setprevDisplaybeers] = useState<Beer[]>(beers);
 
   const toggleFilterList = () => {
     setShowFilterList(!showFilterList);
@@ -28,15 +28,15 @@ const Main = () => {
 
   // };
 
-  const compareArrays = (selectedBeers: Beer[], update: boolean) => {
-    if (update === false) {
-      const includedInBothArrays = displayBeers.filter((beer) =>
-        selectedBeers.includes(beer)
-      );
-      setDisplayBeers(includedInBothArrays);
-    } else {
-      setDisplayBeers(selectedBeers);
-    }
+  const compareArrays = (selectedBeers: Beer[]) => {
+    // if (update === false) {
+    //   const includedInBothArrays = displayBeers.filter((beer) =>
+    //     selectedBeers.includes(beer)
+    //   );
+    //   setDisplayBeers(includedInBothArrays);
+    // } else {
+    setDisplayBeers(selectedBeers);
+    // }
 
     console.log("selectedBeers", selectedBeers);
     console.log("displayBeers", displayBeers);
@@ -80,10 +80,10 @@ const Main = () => {
     filterChoice: string,
     update: boolean
   ) => {
-    let maltSearch: Beer[] = [];
-    let hopsSearch: Beer[] = [];
-    let pairingSearch: Beer[] = [];
-    let abvSearch: Beer[] = [];
+    // let maltSearch: Beer[] = [];
+    // let hopsSearch: Beer[] = [];
+    // let pairingSearch: Beer[] = [];
+    // let abvSearch: Beer[] = [];
     let searchedBeers: Beer[] = [];
     let highAbvBeers: Beer[] = [];
     let acidicPhBeers: Beer[] = [];
@@ -130,20 +130,20 @@ const Main = () => {
       if (selectedValue === "") {
         searchedBeers = beers;
       }
-      compareArrays(searchedBeers, update);
+      compareArrays(searchedBeers);
     } else if (filterChoice === "High ABV > 6.0%") {
       highAbvBeers = beers.filter((beer) => beer.abv > 6);
-      compareArrays(highAbvBeers, update);
+      compareArrays(highAbvBeers);
     } else if (filterChoice === "Acidic ph < 4") {
       acidicPhBeers = beers.filter((beer) => beer.ph < 4);
-      compareArrays(acidicPhBeers, update);
+      compareArrays(acidicPhBeers);
     } else if (filterChoice === "Classic Range") {
       beers.forEach((beer) => {
         if (Number(beer.first_brewed.split("/")[1]) < 2010) {
           classicRangeBeers.push(beer);
         }
       });
-      compareArrays(classicRangeBeers, update);
+      compareArrays(classicRangeBeers);
     }
   };
   //};

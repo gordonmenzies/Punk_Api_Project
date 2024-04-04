@@ -32,7 +32,6 @@ const FilterItem = ({
   return (
     <div className="filterItem__container">
       <select onChange={handleChange} className="filterItem__option">
-        <option>Select An Option</option>
         {removeDuplicatesAndOrganise(sortOptions).map((sortOption, index) => (
           <option className="filterItem__option" key={index}>
             {sortOption}

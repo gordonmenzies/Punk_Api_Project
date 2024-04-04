@@ -10,61 +10,62 @@ type FilterListProps = {
   Beers: Beer[];
 };
 
-let preppedMaltList: string[] = [];
-let preppedHopsList: string[] = [];
-let preppedAbvList: number[] = [];
-let preppedFoodPairingList: string[] = [];
+// let preppedMaltList: string[] = [];
+// let preppedHopsList: string[] = [];
+// let preppedAbvList: number[] = [];
+// let preppedFoodPairingList: string[] = [];
 
-const FilterList = ({ Beers, showFilter, readFilter }: FilterListProps) => {
-  const identifyFoodPairings = (Beers: Beer[]): string[] => {
-    let list: string[] = [];
-    Beers.forEach((beer) => {
-      beer.food_pairing.forEach((pairing) => {
-        list.push(pairing);
-      });
-    });
-    return list;
-  };
+const FilterList = ({ showFilter, readFilter }: FilterListProps) => {
+  // const identifyFoodPairings = (Beers: Beer[]): string[] => {
+  //   let list: string[] = [];
+  //   Beers.forEach((beer) => {
+  //     beer.food_pairing.forEach((pairing) => {
+  //       list.push(pairing);
+  //     });
+  //   });
+  //   return list;
+  // };
 
-  const identifyHops = (Beers: Beer[]): string[] => {
-    let list: string[] = [];
-    Beers.forEach((beer) => {
-      beer.ingredients.hops.forEach((hop) => {
-        list.push(hop.name);
-      });
-    });
-    return list;
-  };
+  // const identifyHops = (Beers: Beer[]): string[] => {
+  //   let list: string[] = [];
+  //   Beers.forEach((beer) => {
+  //     beer.ingredients.hops.forEach((hop) => {
+  //       list.push(hop.name);
+  //     });
+  //   });
+  //   return list;
+  // };
 
-  const identifyMalts = (Beers: Beer[]): string[] => {
-    let list: string[] = [];
-    Beers.forEach((beer) => {
-      beer.ingredients.malt.forEach((malt) => {
-        list.push(malt.name);
-      });
-    });
-    return list;
-  };
+  // const identifyMalts = (Beers: Beer[]): string[] => {
+  //   let list: string[] = [];
+  //   Beers.forEach((beer) => {
+  //     beer.ingredients.malt.forEach((malt) => {
+  //       list.push(malt.name);
+  //     });
+  //   });
+  //   return list;
+  // };
 
-  const identifyAbv = (Beers: Beer[]): number[] => {
-    let list: number[] = [];
-    Beers.forEach((beer) => {
-      list.push(beer.abv);
-    });
-    return list;
-  };
+  // const identifyAbv = (Beers: Beer[]): number[] => {
+  //   let list: number[] = [];
+  //   Beers.forEach((beer) => {
+  //     list.push(Number(beer.abv));
+  //   });
+  //   return list;
+  // };
 
-  preppedMaltList = identifyMalts(Beers);
-  preppedHopsList = identifyHops(Beers);
-  preppedAbvList = identifyAbv(Beers);
-  preppedFoodPairingList = identifyFoodPairings(Beers);
+  // preppedMaltList = identifyMalts(Beers);
+  // preppedHopsList = identifyHops(Beers);
+
+  // preppedAbvList = identifyAbv(Beers);
+  // preppedFoodPairingList = identifyFoodPairings(Beers);
 
   return (
     <div className="filterList__container">
       <h3 onClick={showFilter}>close menu</h3>
       <SearchItem searchName={readFilter} filterChoice="name Search" />
-      {/* <p> ////////// </p>
-      <FilterItem
+      {/* <p> ////////// </p> */}
+      {/* <FilterItem
         readFilter={readFilter}
         filterChoice="Malt"
         sortOptions={preppedMaltList}
