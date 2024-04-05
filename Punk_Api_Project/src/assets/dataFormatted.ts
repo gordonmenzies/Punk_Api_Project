@@ -581,7 +581,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -739,8 +739,8 @@ const beers: Beer[] = [
     ibu: 14,
     target_fg: 1013,
     target_og: 1093,
-    ebc: null,
-    srm: null,
+    ebc: -1,
+    srm: -1,
     ph: 4.4,
     attenuation_level: 80,
     volume: {
@@ -1069,7 +1069,7 @@ const beers: Beer[] = [
     target_og: 1098,
     ebc: 70,
     srm: 35,
-    ph: null,
+    ph: -1,
     attenuation_level: 87,
     volume: {
       value: 20,
@@ -1424,7 +1424,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -2086,7 +2086,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -2784,13 +2784,13 @@ const beers: Beer[] = [
       "One of the most complex beers we’ve ever attempted. A blend of two barrel-aged Imperial Saisons – one black, one red – which has in turn then been aged in rum barrels, it is an enormous, intricate beer. A baseline of warm, smoky raisin and plum, followed by punchy flavour elements coming to the fore – coconut, mint and blackcurrant. There’s a long undercurrent of treacle toffee, before the finish darkens to liquorice, star anise amidst a touch of honey sweetness.",
     image_url: "https://images.punkapi.com/v2/169.png",
     abv: 13.1,
-    ibu: null,
-    target_fg: null,
-    target_og: null,
-    ebc: null,
-    srm: null,
-    ph: null,
-    attenuation_level: null,
+    ibu: -1,
+    target_fg: -1,
+    target_og: -1,
+    ebc: -1,
+    srm: -1,
+    ph: -1,
+    attenuation_level: -1,
     volume: {
       value: 20,
       unit: "litres",
@@ -2803,15 +2803,15 @@ const beers: Beer[] = [
       mash_temp: [
         {
           temp: {
-            value: null,
+            value: -1,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
         temp: {
-          value: null,
+          value: -1,
           unit: "celsius",
         },
       },
@@ -2821,7 +2821,7 @@ const beers: Beer[] = [
     ingredients: {
       malt: [],
       hops: [],
-      yeast: null,
+      yeast: "",
     },
     food_pairing: [
       "Game terrine",
@@ -2872,7 +2872,7 @@ const beers: Beer[] = [
           unit: "celsius",
         },
       },
-      twist: null,
+      twist: -1,
     },
     ingredients: {
       malt: [
@@ -2943,7 +2943,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "AB:21 is a liquorice and blackcurrant infused imperial stout. Rolling in at an imposing 12% abv, this huge and decadent dark beer dials down the charred roastiness and focuses instead on the rich, full-bodied chocolate and dark fruit character of the style.",
-    image_url: null,
+    image_url: "",
     abv: 12,
     ibu: 100,
     target_fg: 1015,
@@ -3047,7 +3047,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "An imperial stout brewed with cacao and coffee, AB22 has spent two years in darkness, drawing complex and indulgent flavours from the Speyside whisky casks in which it resided.",
-    image_url: null,
+    image_url: "",
     abv: 12.5,
     ibu: 70,
     target_fg: 1020,
@@ -3080,7 +3080,7 @@ const beers: Beer[] = [
           unit: "celsius",
         },
       },
-      twist: null,
+      twist: -1,
     },
     ingredients: {
       malt: [
@@ -3212,7 +3212,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our Abstrakt series showcases one-off beers, brewed or blended to the peak of our abilities. Each release is unique and never to be repeated.",
-    image_url: null,
+    image_url: "",
     abv: 11.5,
     ibu: 80,
     target_fg: 1020,
@@ -3245,7 +3245,7 @@ const beers: Beer[] = [
           unit: "celsius",
         },
       },
-      twist: null,
+      twist: -1,
     },
     ingredients: {
       malt: [
@@ -3348,7 +3348,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our latest concept beer, AB:24 is a huge Baltic Porter, brewed with coffee and muscovado sugar.",
-    image_url: null,
+    image_url: "",
     abv: 11.5,
     ibu: 50,
     target_fg: 1019,
@@ -3381,7 +3381,7 @@ const beers: Beer[] = [
           unit: "celsius",
         },
       },
-      twist: null,
+      twist: -1,
     },
     ingredients: {
       malt: [
@@ -3509,7 +3509,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A super-smooth, full-bodied chewy- as-hell barley wine. Our latest concept brew spent 6 months drawing flavour from bourbon barrels.",
-    image_url: null,
+    image_url: "",
     abv: 13.3,
     ibu: 35,
     target_fg: 1020,
@@ -4087,7 +4087,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs La Pirata. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. Our collab with Spanish brewes La Pirata features a barley wine, inspired by Muscatel.",
-    image_url: null,
+    image_url: "null",
     abv: 9,
     ibu: 65,
     target_fg: 1018,
@@ -4236,7 +4236,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -4392,7 +4392,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -4656,7 +4656,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -4796,7 +4796,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -4911,7 +4911,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -5285,7 +5285,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -6018,7 +6018,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Bevog. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. Our Austrian collaboration is with Bevog, and incorporates plum into a Baltic porter.",
-    image_url: null,
+    image_url: "null",
     abv: 7.2,
     ibu: 45,
     target_fg: 1016,
@@ -6178,7 +6178,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -6334,7 +6334,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -6612,7 +6612,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -6728,7 +6728,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "We gave our Equity Punks the keys to the brewery and let them brew the beer, as well as join Q&As and tour our HQ. The beer was voted on exclusively by Equity Punks.",
-    image_url: null,
+    image_url: "null",
     abv: 8,
     ibu: 60,
     target_fg: 1013,
@@ -6885,7 +6885,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -7006,8 +7006,8 @@ const beers: Beer[] = [
     ibu: 8,
     target_fg: 1007,
     target_og: 1040,
-    ebc: null,
-    srm: null,
+    ebc: -1,
+    srm: -1,
     ph: 3.2,
     attenuation_level: 83,
     volume: {
@@ -7255,7 +7255,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -8784,7 +8784,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our Equity Punk gypsy brewery - Beatnik Brewing Collective - voted for this recipe as their 2017 annual brew. A blonde stout brewed to export strength, the stout character comes from extra ingredients instead of dark malts.",
-    image_url: null,
+    image_url: "null",
     abv: 7,
     ibu: 55,
     target_fg: 1020,
@@ -8953,7 +8953,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -10145,7 +10145,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -10242,7 +10242,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -10474,7 +10474,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "We’ve split our bets with Casino Rye Ale and doubled up on the malt front, with barley and rye on the grain bill.",
-    image_url: null,
+    image_url: "null",
     abv: 5.1,
     ibu: 40,
     target_fg: 1009,
@@ -10747,7 +10747,7 @@ const beers: Beer[] = [
             value: 68,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -11182,7 +11182,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "This one-off brew showcases the flavours of a Mexican spiced hot chocolate, infused with an imperial stout.",
-    image_url: null,
+    image_url: "null",
     abv: 9,
     ibu: 25,
     target_fg: 1020,
@@ -11367,7 +11367,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -11449,7 +11449,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "Winner of the 2017 Prototype Challenge, ClockWork Tangerine is a session strength IPA, infused with tangerine, and appears as our new Q2 Seasonal, replacing Hop Fiction.",
-    image_url: null,
+    image_url: "null",
     abv: 4.5,
     ibu: 37,
     target_fg: 1012,
@@ -12148,7 +12148,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -12239,7 +12239,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "Our crew designed it, and we bottled it just for ourselves! We chose an 8% red ale, mash hopped and first wort hopped with New Zealand origin hops.",
-    image_url: null,
+    image_url: "null",
     abv: 8,
     ibu: 100,
     target_fg: 1011,
@@ -13022,7 +13022,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "An exclusive barrel-aged blend, brought together to reward investors on Equity for Punks USA; two imperial stouts aged in grain whisky barrels for over a year.",
-    image_url: null,
+    image_url: "null",
     abv: 14.1,
     ibu: 70,
     target_fg: 1020,
@@ -13651,7 +13651,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -14255,7 +14255,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "Dog G is a benchmark in liquid form; our 11th anniversary beer. A 17% imperial stout brewed with a compelling mix of dark malts, chillies, cacao and coffee - to make it a true milestone we then decided to age Dog G in rye whiskey barrels.",
-    image_url: null,
+    image_url: "null",
     abv: 17,
     ibu: 100,
     target_fg: 1015,
@@ -14760,7 +14760,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -16105,7 +16105,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 5.6% Dortmunder Lager, that featues in Fanzine, our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 5.6,
     ibu: 32,
     target_fg: 1009,
@@ -16228,7 +16228,7 @@ const beers: Beer[] = [
             value: 68,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -16556,7 +16556,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Birrificiano Italiano. One of a series of collaborations with European craft breweries, aimed at promoting engagement\nand market growth. Our Italian collaboration is with Birrificiano Italiano, and the beer is a dark lager brewed with a unique dark malt from an Italian micro-maltster.",
-    image_url: null,
+    image_url: "null",
     abv: 5.5,
     ibu: 28,
     target_fg: 1009,
@@ -16718,7 +16718,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -17156,7 +17156,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "A Vermont style IPA, with low background bitterness, loaded with juicy fruit character. Pine, stonefruit, mango, light resin and hints of lime peel - this juicy IPA is low in bitterness, full-bodied and smooth, enhancing the soft ripe fruit flavours.",
-    image_url: null,
+    image_url: "null",
     abv: 7.2,
     ibu: 30,
     target_fg: 1009,
@@ -17672,7 +17672,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -17787,7 +17787,7 @@ const beers: Beer[] = [
             value: 68,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -17892,7 +17892,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -18054,7 +18054,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Swedish market, this Hello My Name brew features a twist of flavour inspired by Sweden.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -18194,7 +18194,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Norwegian market, this Hello My Name brew features a twist of flavour inspired by Norway.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -18491,7 +18491,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the German market, this Hello My Name brew features a twist of flavour inspired by Germany.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -18650,7 +18650,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -18779,7 +18779,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "We asked the public to tell us the one beer we should brew again, from our entire back catalogue. They chose well. Cloudberries team up with pan-global hops for an all out fruit riot against a caramel malt base.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1013,
@@ -18968,7 +18968,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Dutch market, this Hello My Name brew features a twist of flavour inspired by the Netherlands.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -19301,7 +19301,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Spanish market, this Hello My Name brew features a twist of flavour inspired by Spain.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -19445,7 +19445,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the French market, this Hello My Name brew features a twist of flavour inspired by France.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -19594,8 +19594,8 @@ const beers: Beer[] = [
     ibu: 70,
     target_fg: 1013,
     target_og: 1076,
-    ebc: null,
-    srm: null,
+    ebc: -1,
+    srm: -1,
     ph: 4.4,
     attenuation_level: 83,
     volume: {
@@ -19725,7 +19725,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Irish market, this Hello My Name brew features a twist of flavour inspired by Ireland.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -20040,7 +20040,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Finnish market, this Hello My Name brew features a twist of flavour inspired by Finland.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -20184,7 +20184,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed exclusively for the Italian market, this Hello My Name brew features a twist of flavours inspired by Italy.",
-    image_url: null,
+    image_url: "null",
     abv: 8.2,
     ibu: 70,
     target_fg: 1009,
@@ -20476,7 +20476,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -20628,7 +20628,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -20781,7 +20781,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -21057,7 +21057,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Indulgent, complex, and endlessly rewarding; packed with flavours of toffee, coconut, red berry, burnt sugar, marzipan, orange, cherry - American oak adds structure and depth to this chewy and warming barley wine brewed with rye and aged in rye whiskey cask.",
-    image_url: null,
+    image_url: "null",
     abv: 11.5,
     ibu: 132,
     target_fg: 1020,
@@ -21165,7 +21165,7 @@ const beers: Beer[] = [
       "Honey & Lemon Blitz sees tart Berliner Weisse character multiplied by lemony acidity; light bready malt and a hint of warming honey hold this back from the brink of palate- destroying sourness.",
     image_url: "https://images.punkapi.com/v2/keg.png",
     abv: 3.2,
-    ibu: null,
+    ibu: -1,
     target_fg: 1008,
     target_og: 1039,
     ebc: 8,
@@ -21424,7 +21424,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "Hop Shot is a high-velocity hop hit. Our latest experiment in ice-distillation is a west coast IPA, subjected to Antarctic temperatures and concentrated by removing the ice that forms. The result is a 22% ABV hop grenade in a 110ml bottle.",
-    image_url: null,
+    image_url: "null",
     abv: 7,
     ibu: 250,
     target_fg: 1010,
@@ -21594,7 +21594,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -21748,7 +21748,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -22027,7 +22027,7 @@ const beers: Beer[] = [
             value: 68,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -22522,7 +22522,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "A collaboration with Omnipollo, known for their uncanny ability to repilcate dessert flavours in indulgent beers. This caramel and pecan flavoured imperial stout has been barrel aged for almost a year in whisky casks, to add an extra level of depth to the pecan mud pie concept.",
-    image_url: null,
+    image_url: "null",
     abv: 12,
     ibu: 55,
     target_fg: 1035,
@@ -22694,7 +22694,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -22929,7 +22929,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A non-dry-hopped pale ale, using new hopping technqiues and in- depth fermentation know-how.",
-    image_url: null,
+    image_url: "null",
     abv: 4.2,
     ibu: 30,
     target_fg: 1008,
@@ -23075,7 +23075,7 @@ const beers: Beer[] = [
             value: 69,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -23158,7 +23158,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 5% ABV Vienna Lager, that features in Fanzine, our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 5,
     ibu: 25,
     target_fg: 1007,
@@ -23864,7 +23864,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 6.9% ABV West Coast IPA, Jet Trash is one of the core Fanzine beers, and will feature evolving editions as part of our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 6.9,
     ibu: 65,
     target_fg: 1008,
@@ -24027,7 +24027,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 4.7% ABV American pale ale, Jinx Pale Ale is one of the core Fanzine beers, and will feature evolving editions as part of our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 4.7,
     ibu: 35,
     target_fg: 1008,
@@ -24255,7 +24255,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "Our first 2018 Wildcard brew, Kamikaze Knitting Club is a one-off brew. A maple stout, Kamikaze combines dark malts with a classic Canadian export, adding to the warming malty and smokey character.",
-    image_url: null,
+    image_url: "null",
     abv: 7.5,
     ibu: 30,
     target_fg: 1013,
@@ -24528,7 +24528,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 7.4% ABV East Coast IPA, King of Eights is one of the core Fanzine beers, and will feature evolving editions as part of our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 7.4,
     ibu: 20,
     target_fg: 1009,
@@ -24630,7 +24630,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "A 4.7% German Pils with light, biscuit and toasty malt character, upon which is built a hop bitterness that provides complexity and a long, dry finish.",
-    image_url: null,
+    image_url: "null",
     abv: 4.7,
     ibu: 40,
     target_fg: 1008,
@@ -24767,7 +24767,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -25567,7 +25567,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -26068,7 +26068,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "In protest against the potential withdrawal of the USA from the Paris agreement, we brewed a saison (which ferments at high temperatures) with melted ice caps (glacier water) and cloudberries (an Arctic berry).",
-    image_url: null,
+    image_url: "null",
     abv: 7.5,
     ibu: 35,
     target_fg: 1004,
@@ -26204,7 +26204,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Amundsen. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. With Norwegian craft brewers Amundsen, we are creating a mash-up of two existing beers, resulting in a coffee, chocolate and marshmallow Russian Imperial Stout.",
-    image_url: null,
+    image_url: "null",
     abv: 12,
     ibu: 75,
     target_fg: 1025,
@@ -26469,7 +26469,7 @@ const beers: Beer[] = [
       "A huge, chewy barley wine, loaded with bitterness and balanced with a sweet and spicy combo of mango and chili. A concept brew which was so well received, we tweaked it and it became Neon Overlord.",
     image_url: "https://images.punkapi.com/v2/keg.png",
     abv: 12,
-    ibu: null,
+    ibu: -1,
     target_fg: 1015,
     target_og: 1110,
     ebc: 20,
@@ -26756,7 +26756,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog v Brewski. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. Our Swedish collaboration with Brewski is a mango IPA.",
-    image_url: null,
+    image_url: "null",
     abv: 6,
     ibu: 20,
     target_fg: 1010,
@@ -27431,7 +27431,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "We gave our customers the keys to the brewery and let them choose every aspect of this beer. Sour cherry combines with fruity hop character against a biscuit malt backbone with a hint of alcohol warmth, and an oaky undercurrent.",
-    image_url: null,
+    image_url: "null",
     abv: 10.5,
     ibu: 100,
     target_fg: 1010,
@@ -28483,7 +28483,7 @@ const beers: Beer[] = [
             value: 68,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -28709,7 +28709,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -29048,7 +29048,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A big, dank, double IPA, sitting in the 8-9% ABV bracket, in our Amplified range - filling a gap that has been sitting empty since Hardcore IPA departed. A new beer developed by our Head of Production Jason Pond; the first brew he came up with since joining became an instant hit.",
-    image_url: null,
+    image_url: "null",
     abv: 8.5,
     ibu: 70,
     target_fg: 1010,
@@ -29232,7 +29232,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -29538,7 +29538,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Oedipus. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. This India pale lager has been brewed with Dutch brewers Oedipus.",
-    image_url: null,
+    image_url: "null",
     abv: 5,
     ibu: 40,
     target_fg: 1007,
@@ -29696,7 +29696,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "BrewDog vs Cloudwater is a 6.8% Vermont-style India Pale Ale, hopped with Mosaic in the whirlpool only. Without any big- hitting additions of hops in the boil, we carried the flavour by heavily dry-hopping the brew with Citra and Mosaic. We also used oats in the recipe to deliver the trademark smooth mouthfeel – and made it truly authentic by propagating a one-off culture of Vermont yeast, specifically for the brew.",
-    image_url: null,
+    image_url: "null",
     abv: 6.8,
     ibu: 45,
     target_fg: 1012,
@@ -29802,7 +29802,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "A classic German weissbeir with aromas of banana and clove, layered with New World hop aromas of orange.",
-    image_url: null,
+    image_url: "null",
     abv: 7.5,
     ibu: 35,
     target_fg: 1012,
@@ -29968,7 +29968,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -30092,7 +30092,7 @@ const beers: Beer[] = [
             value: 70,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -30426,7 +30426,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -31051,7 +31051,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "Our longest running beer series, Paradox sees us ageing an Imperial Stout in different types of cask. This one showcases grain whisky.",
-    image_url: null,
+    image_url: "null",
     abv: 13.5,
     ibu: 100,
     target_fg: 1015,
@@ -31625,7 +31625,7 @@ const beers: Beer[] = [
     first_brewed: "2005",
     description:
       "In 2006 James and Martin hijacked a beer dinner run by Michael Jackson, the acclaimed beer and whisky writer, and convinced him to taste one of their home brews. This was a defining moment in BrewDog prehistory, and that beer was the first incarnation of the ubiquitous Paradox. Aged in a variety of casks over the years, Paradox is dark, decadent and encapsulating. Can be enjoyed fresh; phenomenal when aged.",
-    image_url: null,
+    image_url: "null",
     abv: 13,
     ibu: 100,
     target_fg: 1015,
@@ -32042,7 +32042,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -32685,7 +32685,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our Prototype Challenge sees us pit three new trial beers against each other. This Black Rye IPA combines two spins on an American IPA, in the left-right jab combo of extra ingredients.",
-    image_url: null,
+    image_url: "null",
     abv: 6.5,
     ibu: 70,
     target_fg: 1012,
@@ -32832,7 +32832,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "This Blonde Ale is a new recipe and uses a new yeast - so it is a true Prototype. Originally lined up as part of the 2017 Prototype Challenge it was released shortly afterwards. but hey, these things happen.",
-    image_url: null,
+    image_url: "null",
     abv: 4.5,
     ibu: 15,
     target_fg: 1009,
@@ -32925,7 +32925,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our Prototype Challenge sees us pit three new trial beers against each other. This Double IPA is packed with a blend of our favourite American hops and has a huge dry- hop aroma.",
-    image_url: null,
+    image_url: "null",
     abv: 8.5,
     ibu: 60,
     target_fg: 1007,
@@ -33192,7 +33192,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -33705,7 +33705,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "A one-off beer which combines the sweet and juicy flavour of stonefruit with tropical hop aromas. This can features exclusive artwork by Tracie Ching.",
-    image_url: null,
+    image_url: "null",
     abv: 7.5,
     ibu: 40,
     target_fg: 1013,
@@ -33840,7 +33840,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -36067,7 +36067,7 @@ const beers: Beer[] = [
       "A beer brewed specifically for the British Science Festival, held in Swansea.",
     image_url: "https://images.punkapi.com/v2/keg.png",
     abv: 5,
-    ibu: null,
+    ibu: -1,
     target_fg: 1011,
     target_og: 1050,
     ebc: 24,
@@ -36199,7 +36199,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "A dark and decadent beer brewed with coconut, vanilla, cacao.",
-    image_url: null,
+    image_url: "null",
     abv: 7.4,
     ibu: 75,
     target_fg: 1016,
@@ -36310,7 +36310,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "This one-off brew is packed with all the decadent flavours and textures associated with Imperial Stouts. This can features exclusive artwork by The Red Dress.",
-    image_url: null,
+    image_url: "null",
     abv: 8,
     ibu: 70,
     target_fg: 1014,
@@ -37070,7 +37070,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -37591,7 +37591,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Our Q4 Seasonal is a red rye IPA. This twist on an American IPA involves a more complex malt base, with the careful addition of rye - a grain known for its trickiness when brewing with anything above a tiny percentage.",
-    image_url: null,
+    image_url: "null",
     abv: 5.2,
     ibu: 50,
     target_fg: 1011,
@@ -38631,7 +38631,7 @@ const beers: Beer[] = [
     first_brewed: "2017",
     description:
       "Brewed to a concept voted on at Craft Beer Rising, this one-off beer is an experimental brew which emulates the flavour of lemon meringue pie.",
-    image_url: null,
+    image_url: "null",
     abv: 6.5,
     ibu: 5,
     target_fg: 1015,
@@ -39813,7 +39813,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "Welcome aboard our experimental range of tuned IPAs. Buckle up for an explosive sensory bombardment. Tropical fruit and resinous pine are primed. The first wave of pineapple, melon and mango quickly accelerate into a afterburner of candied citrus fruit and sweet caramel. Sonic Boom - IPA turning at the speed of sound.",
-    image_url: null,
+    image_url: "null",
     abv: 6.5,
     ibu: 60,
     target_fg: 1008,
@@ -39979,7 +39979,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -40275,7 +40275,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Brlo. One of a series of collaborations with European craft breweries, aimed at promoting engagement and market growth. Our German collaboration is with BRLO, and the beer is a dry- hopped Maibock; a new world take on a strong pale lager.",
-    image_url: null,
+    image_url: "null",
     abv: 6.4,
     ibu: 34,
     target_fg: 1014,
@@ -40446,8 +40446,8 @@ const beers: Beer[] = [
     ibu: 20,
     target_fg: 1010,
     target_og: 1060,
-    ebc: null,
-    srm: null,
+    ebc: -1,
+    srm: -1,
     ph: 3.2,
     attenuation_level: 87,
     volume: {
@@ -40744,7 +40744,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -41320,7 +41320,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -41448,11 +41448,11 @@ const beers: Beer[] = [
       "The End of History: The name derives from the famous work of philosopher Francis Fukuyama, this is to beer what democracy is to history. Complexity defined. Floral, grapefruit, caramel and cloves are intensified by boozy heat.",
     image_url: "https://images.punkapi.com/v2/24.png",
     abv: 55,
-    ibu: null,
+    ibu: -1,
     target_fg: 1000,
     target_og: 1112,
-    ebc: null,
-    srm: null,
+    ebc: -1,
+    srm: -1,
     ph: 4.4,
     attenuation_level: 100,
     volume: {
@@ -41794,7 +41794,7 @@ const beers: Beer[] = [
             value: 63,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -41904,7 +41904,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -42054,7 +42054,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -42204,7 +42204,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -42354,7 +42354,7 @@ const beers: Beer[] = [
             value: 69,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -42446,7 +42446,7 @@ const beers: Beer[] = [
     first_brewed: "2016",
     description:
       "Tropic Thunder is the winner of the first ever #HomeBrewDog competition; the brainchild of Tom Doyle, this beer was the highest rated of the 307 beers that were tasted. A full-bodied and complex stout loaded with chocolate, mocha and roasty flavours, finishing with a vibrant burst of orange.",
-    image_url: null,
+    image_url: "null",
     abv: 7,
     ibu: 25,
     target_fg: 1020,
@@ -43110,7 +43110,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "BrewDog vs Fierce Beer. A rebrew of the Fierce Beer & Flagship bar Collabfest 2017 winning beer, Very Big Moose is being scaled up to our Ellon brewhouse.",
-    image_url: null,
+    image_url: "null",
     abv: 12,
     ibu: 25,
     target_fg: 1038,
@@ -43750,7 +43750,7 @@ const beers: Beer[] = [
       ],
       fermentation: {
         temp: {
-          value: null,
+          value: -1,
           unit: "celsius",
         },
       },
@@ -44031,7 +44031,7 @@ const beers: Beer[] = [
             value: 65,
             unit: "celsius",
           },
-          duration: null,
+          duration: -1,
         },
       ],
       fermentation: {
@@ -44289,7 +44289,7 @@ const beers: Beer[] = [
     first_brewed: "2018",
     description:
       "A new 5% Pilsner, that feaures in Fanzine, our new subscription model.",
-    image_url: null,
+    image_url: "null",
     abv: 5,
     ibu: 37,
     target_fg: 1006,
