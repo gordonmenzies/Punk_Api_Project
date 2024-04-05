@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+
+@media screen and (max-width: 480px) {
+  .mainPage--check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mainPage__filterListAndContent {
+      .mainBody__filterList--desktop {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .mainPage--check {
+    display: flex;
+    flex-direction: column;
+
+    .mainPage__filterListAndContent {
+      display: flex;
+      .mainBody__filterList--mobile {
+        display: none;
+      }
+
+      .mainBody__filterList--desktop {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+}

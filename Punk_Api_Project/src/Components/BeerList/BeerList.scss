@@ -1,0 +1,23 @@
+@use "../../assets/color-variables.scss" as *;
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: $background-blue;
+  }
+  .beerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: $background-blue;
+  }
+  .beerList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
