@@ -125,7 +125,11 @@ const Main = () => {
               readFilter={readExistingFilters}
               showFilter={toggleFilterList}
             />
-            <BeerList beers={displayBeers} />
+            {displayBeers.length === 0 ? (
+              <p>There are no beers that fit that description</p>
+            ) : (
+              <BeerList beers={displayBeers} />
+            )}
           </div>
           <Routes>
             <Route
@@ -142,7 +146,7 @@ const Main = () => {
                   Beers={displayBeers}
                 />
               )}
-              {displayBeers.length !== 0 ? (
+              {displayBeers.length === 0 ? (
                 <p>There are no beers that fit that description</p>
               ) : (
                 <BeerList beers={displayBeers} />
