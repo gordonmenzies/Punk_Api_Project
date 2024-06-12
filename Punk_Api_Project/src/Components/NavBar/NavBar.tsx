@@ -2,7 +2,7 @@ import "./NavBar.scss";
 import { Link } from "react-router-dom";
 
 type NavBarProps = {
-  showFilter: () => void;
+  showFilter?: () => void;
 };
 
 const NavBar = ({ showFilter }: NavBarProps) => {

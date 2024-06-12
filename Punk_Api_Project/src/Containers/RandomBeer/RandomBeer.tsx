@@ -1,4 +1,5 @@
 import "./RandomBeer.scss";
+import NavBar from "../../Components/NavBar/NavBar";
 import { Beer } from "../../assets/types";
 
 type RandomBeerProps = { beer: Beer };

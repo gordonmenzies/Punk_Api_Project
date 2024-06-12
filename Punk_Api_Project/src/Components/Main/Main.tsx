@@ -59,7 +59,7 @@ const Main = () => {
           result.selectedValue = selectedValue;
           // set the new array state
           setFilterResult(newArray);
-          filterArray(selectedValue, filterChoice);
+          filterArray(selectedValue, filterChoice, true);
         }
       });
     } else {
@@ -68,43 +68,57 @@ const Main = () => {
         ...filterResult,
         { selectedValue: selectedValue, filterChoice: filterChoice },
       ]);
-      filterArray(selectedValue, filterChoice);
+      filterArray(selectedValue, filterChoice, false);
     }
   };
 
-  const filterArray = (selectedValue: string, filterChoice: string) => {
+  const filterArray = (
+    selectedValue: string,
+    filterChoice: string,
+    filterReselect: boolean
+  ) => {
     let searchedBeers: Beer[] = [];
     let highAbvBeers: Beer[] = [];
     let acidicPhBeers: Beer[] = [];
     let classicRangeBeers: Beer[] = [];
 
+    // filter via text input
     if (filterChoice === "name Search") {
       console.log(selectedValue);
+      setNameSearchArray(
+        beers.filter((beer) => beer.name.includes(selectedValue))
+      );
       searchedBeers = beers.filter((beer) => beer.name.includes(selectedValue));
       if (selectedValue === "") {
+        setNameSearchArray(beers);
         searchedBeers = beers;
       }
-      compareArrays(searchedBeers, filterChoice);
-      setNameSearchArray(searchedBeers);
+      compareArrays(nameSearchArray, filterChoice);
+
+      // filter via radio buttons
     } else if (filterChoice == "All Beers") {
       compareArrays(beers, filterChoice);
       setRadioArray(beers);
     } else if (filterChoice === "High ABV > 6.0%") {
+      setRadioArray(beers.filter((beer) => beer.abv > 6));
       highAbvBeers = beers.filter((beer) => beer.abv > 6);
-      compareArrays(highAbvBeers, filterChoice);
-      setRadioArray(highAbvBeers);
+      compareArrays(radioArray, filterChoice);
     } else if (filterChoice === "Acidic ph < 4") {
+      setRadioArray(beers.filter((beer) => beer.ph < 4));
       acidicPhBeers = beers.filter((beer) => beer.ph < 4);
-      compareArrays(acidicPhBeers, filterChoice);
-      setRadioArray(acidicPhBeers);
+      compareArrays(radioArray, filterChoice);
     } else if (filterChoice === "Classic Range") {
-      beers.forEach((beer) => {
-        if (Number(beer.first_brewed.split("/")[1]) < 2010) {
-          classicRangeBeers.push(beer);
-        }
+      setRadioArray(
+        beers.filter((beer) => {
+          return Number(beer.first_brewed.split("/")[1]) < 2010;
+        })
+      );
+      classicRangeBeers = beers.filter((beer) => {
+        return Number(beer.first_brewed.split("/")[1]) < 2010;
       });
-      compareArrays(classicRangeBeers, filterChoice);
-      setRadioArray(classicRangeBeers);
+    } else if (filterChoice === "Hops") {
+      if (readExistingFilters(selectedValue, filterChoice) === true) {
+      }
     }
   };
 
